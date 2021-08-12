@@ -12,14 +12,14 @@ Gem::Specification.new do |gem|
   gem.homepage = "https://github.com/collectiveidea/audited"
   gem.license = "MIT"
 
-  gem.files = `git ls-files`.split($\).reject { |f| f =~ /(\.gemspec)/ }
+  gem.files = Dir['lib/**/*']
 
   gem.required_ruby_version = ">= 2.3.0"
 
-  gem.add_dependency "activerecord", ">= 5.0", "< 6.2"
+  gem.add_dependency "activerecord", ">= 5.0", "<= 7.0"
 
   gem.add_development_dependency "appraisal"
-  gem.add_development_dependency "rails", ">= 5.0", "< 6.2"
+  gem.add_development_dependency "rails", ">= 5.0", "<= 7.0"
   gem.add_development_dependency "rspec-rails"
   gem.add_development_dependency "standard"
   gem.add_development_dependency "single_cov"
